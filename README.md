@@ -4,3 +4,7 @@
 ```ansible-vault create aws_keys.yml```
 
 2) 
+
+
+3) Run playbook
+```ansible-playbook task.yml --ask-vault-pass```
