@@ -16,3 +16,10 @@
        wait: yes
        assign_public_ip: yes
        instance_tags: '{"Name":"webserver"}'
+     register: ec2_1
+
+   - name: Add the newly created host so that we can further contact it
+     add_host:
+       name: "{{ item.public_ip }}"
+       groups: webservers
+     with_items: "{{ ec2_1.instances }}"
