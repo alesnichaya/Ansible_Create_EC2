@@ -5,8 +5,10 @@
 `ansible-playbook task.yml --ask-vault-pass`
 3) To create an instance, use the tag "create"
 `ansible-playbook task.yml --ask-vault-pass --tags "create"`
+
 To install Apache , use the tag "configure"
 `ansible-playbook task.yml --ask-vault-pass --tags "configure"`
+
 To terminate instance , use the tag "terminate"
 `ansible-playbook task.yml --ask-vault-pass --tags "terminate"`
 
